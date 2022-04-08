@@ -1,29 +1,44 @@
 // JAVASCRIPT FOR ETCH-A-SKETCH
 
-let body = document.querySelector('body');
 
-body.id = 'body';
+function clearGrid() {
+    const container = document.querySelector('.container');
 
-let container = document.createElement('div');
-container.style.display = "flex";
+    if (container !== null)
+    {
+        container.remove();
+    }
+}
 
-document.getElementById('body').appendChild(container);
-container.id = 'container';
 
-let div = document.createElement('div');
-div.textContent = "div";
-div.style.border = "5px solid black";
+function drawGrid() {
+    clearGrid();
 
-for (let i = 1; i < 5; i++)
-{
-    const column = div.cloneNode(true);
-    document.getElementById('container').appendChild(column);
-    column.id = `column${i}`;
+    let body = document.querySelector('body');
+    let container = document.createElement('div');
+    container.className = 'container';
 
-    for (let j = 1; j < 4; j++)
-    { 
-        const row = div.cloneNode(true);
-        document.getElementById(`column${i}`).appendChild(row);
-        row.id = `row${j}`;
+    body.appendChild(container);
+
+    let div = document.createElement('div');
+    div.className = 'div';
+
+    let gridDim = document.getElementById('grid-dim').value;
+
+    for (let i = 0; i < (gridDim * gridDim); i++)
+    {
+        let square = div.cloneNode(true);
+        square.textContent = i;
+
+        container.appendChild(square);
+    }
+
+    let grid = container.querySelectorAll('.div');
+
+    for (let i = 0; i < (gridDim * gridDim); i++)
+    {
+        grid[i].addEventListener('mouseover', () => { 
+            grid[i].style.backgroundColor = 'black'; 
+        });
     }
 }
