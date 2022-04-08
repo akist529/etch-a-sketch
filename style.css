@@ -2,15 +2,17 @@
 
 body {
     text-align: center;
+    background-color: #e03a3a;
+    height: 100vh;
 }
 
 h1 {
     font-size: 48px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
 }
 
 input {
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .container {
@@ -18,9 +20,23 @@ input {
     width: 80vh;
     margin: auto auto;
     border: 3px solid black;
+    background-color: lightgrey;
+    border-radius: 40px;
 }
 
 .container div {
     aspect-ratio: 1;
     border: 1px solid black;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1,
+.title h2 {
+    display: inline-block;
+    margin: 0 20px;
 }

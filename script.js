@@ -1,5 +1,7 @@
 // JAVASCRIPT FOR ETCH-A-SKETCH
 
+drawGrid();
+
 function clearGrid() {
     const container = document.querySelector('.container');
 
@@ -13,11 +15,12 @@ function clearGrid() {
 function drawGrid() {
     clearGrid();
 
-    let body = document.querySelector('body');
+    let body = document.getElementById('body');
     let container = document.createElement('div');
     container.className = 'container';
+    let enterGrid = document.getElementById('enterGrid');
 
-    body.appendChild(container);
+    body.insertBefore(container, enterGrid);
 
     let div = document.createElement('div');
     div.className = 'div';
