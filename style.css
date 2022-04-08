@@ -4,9 +4,18 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+}
+
+input {
+    margin-bottom: 20px;
+}
+
 .container {
     display: grid;
-    width: 50%;
+    width: 80vh;
     margin: auto auto;
     border: 3px solid black;
 }

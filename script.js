@@ -36,7 +36,7 @@ function drawGrid() {
     for (let i = 0; i < (gridDim * gridDim); i++)
     {
         grid[i].addEventListener('mouseover', () => { 
-            grid[i].style.backgroundColor = 'black'; 
+            grid[i].style.backgroundColor = document.getElementById("pixelColor").value; 
         });
     }
 
