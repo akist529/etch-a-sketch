@@ -1,6 +1,5 @@
 // JAVASCRIPT FOR ETCH-A-SKETCH
 
-
 function clearGrid() {
     const container = document.querySelector('.container');
 
@@ -28,7 +27,6 @@ function drawGrid() {
     for (let i = 0; i < (gridDim * gridDim); i++)
     {
         let square = div.cloneNode(true);
-        square.textContent = i;
 
         container.appendChild(square);
     }
@@ -41,4 +39,15 @@ function drawGrid() {
             grid[i].style.backgroundColor = 'black'; 
         });
     }
+
+    let gridSize = `repeat(${gridDim}, auto)`;
+
+    document.querySelector('.container').style.gridTemplateColumns = gridSize;
+}
+
+
+function updateGrid() {
+    let gridSize = document.getElementById('grid-dim').value;
+
+    document.getElementById('grid-dim-out').textContent = gridSize;
 }

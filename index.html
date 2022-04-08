@@ -9,7 +9,8 @@
         <h1>Etch-A-Sketch</h1>
         <form>
             <label for='grid-dim'>Enter grid dimensions:</label>
-            <input type='number' id='grid-dim' name='grid-dim'/>
+            <input type='range' id='grid-dim' name='grid-dim' min='1' max='64' value='1' oninput="updateGrid()"/>
+            <output id="grid-dim-out" name="grid-dim-out" for="grid-dim">1</output>
             <input type='button' onclick='drawGrid()' value='Submit'/>
         </form>
         <script src="./script.js"></script>
