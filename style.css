@@ -22,11 +22,28 @@ input {
     border: 3px solid black;
     background-color: lightgrey;
     border-radius: 40px;
+    overflow: hidden;
 }
 
 .container div {
     aspect-ratio: 1;
     border: 1px solid black;
+}
+
+.dial {
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    font-weight: 700;
+    font-size: 32px;
 }
 
 .title {
@@ -38,5 +55,21 @@ input {
 .title h1,
 .title h2 {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 20px 20px;
+}
+
+#enterColor {
+    font-size: 28px;
+}
+
+#enterGrid {
+    font-size: 28px;
+}
+
+#gridButton {
+    font-size: 24px;
+}
+
+#mainTitle {
+    font-style: italic;
 }
